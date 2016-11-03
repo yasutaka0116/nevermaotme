@@ -1,0 +1,31 @@
+.top
+  .topinner.clearfix
+    %p.topday
+      %time{datetime: "今日"}
+        %em{class: "mdTopDate01Today"}
+          2016.11.3
+        %span{class: "mdTopDate01week"}
+          (Thu)
+    / .MdSocialLink0
+    %ul.linkul
+      %li.linkli
+        = link_to "https://www.facebook.com/navermatome" do
+          %spsn.mdSocialLinks01url
+            FACEBOOK
+      %li.linkli
+        = link_to "http://twitter.com/#!/matomenaver" do
+          %span.mdSOCIAL01itot
+            Twitter
+      %li.linkli
+        = link_to "http://matome.naver.jp/feed/hot" do
+          %span.mdSOCIAL01i
+            RSS
+  .content
+    .content_inner
+      .content_left
+        .content_category
+        .content_topic
+        .content_ranking
+      .content_right
+        .content_best
+
