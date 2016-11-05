@@ -48,4 +48,7 @@ end
 
   gem 'haml-rails'
   gem 'sprockets'
+  gem 'devise'
+  gem 'omniauth'
+  gem 'omniauth-twitter'
 
