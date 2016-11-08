@@ -1,0 +1,51 @@
+.signup{
+  width:100%;
+  height:230px;
+    h1{
+    text-alighn:center;
+    }
+}
+
+
+
+.signup_middle{
+  width:100%;
+  height:170px;
+  background-color:#7FFF00;
+    .signup_form{
+      width:850px;
+      height:100px;
+      margin: 0 auto;
+        .unit{
+          height:60px;
+          width:270px;
+          float: left;
+          margin:50px 10px 0 0;
+        }
+    }
+}
+
+.signup_button{
+  height:50px;
+  width: 240px;
+  margin:50px auto 200px;
+  border-radius: 10px;
+}
+
+.form_button{
+  height:50px;
+  width: 240px;
+  border-radius: 10px;
+}
+
+.form_size2{
+  height:40px;
+  width: 270px;
+  border-radius: 10px;
+}
+
+span{
+  color:white;
+}
+
+

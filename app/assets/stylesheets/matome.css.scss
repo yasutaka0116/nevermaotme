@@ -1,10 +1,31 @@
+a{
+  color:#545454;
+}
+
+a.link{
+  text-decoration: none;
+}
+
+a.visited{
+  text-decoration: none;
+}
+a.active{
+  text-decoration: none;
+}
+a.hover{
+  text-decoration: underline;
+}
+
+
+
+
 .headinner{
   width: 1000px;
   border-top: 3px solid #333;
   border-bottom: 1px solid #e7e7e7;
   height: 112px;
   margin: 0 auto;
-  background-color: #ADD8E6;
+
   }
 
 
@@ -20,6 +41,8 @@
   float: right;
   padding-right: 10px;
 }
+
+
 
 .title{
   text-align:center;
@@ -117,13 +140,11 @@
 
 .footerinner{
   width: 100%;
-  background-color: black;
 }
 
 .footerlist{
   width: 1000px;
   height:50px;
-  background-color: green;
   margin: 0 auto;
 }
 

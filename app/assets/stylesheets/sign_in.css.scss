@@ -1,0 +1,107 @@
+.login{
+  width:100%;
+  height:210px;
+  h1{
+    text-align:center;
+    padding:150px;
+    font-wight:900;
+    color: green;
+  }
+}
+
+
+
+.login_middle{
+  height:220px;
+  width: 100%;
+  background-color: green;
+    .form{
+      width: 630px;
+    height:220px;
+    margin-left:430px;
+      .left{
+        width:330px;
+        height:150px;
+        float:left;
+        margin-top:30px;
+        position:relative;
+      }
+      .right{
+        width:300px;
+        height: 100px;
+        float:left;
+        margin-top: 30px;
+        p{
+        color:white;
+        }
+      }
+    }
+  }
+
+
+
+.login_signup{
+  height:80px;
+  width: 100%;
+  position: relative;
+  .form{
+    height:40px;
+    width:400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+      .left{
+        height:40px;
+        width:110px;
+        background-color:green;
+        border-radius: 10px;
+        text-align: center;
+        float:left;
+      }
+      .right{
+        width:290px;
+        height:40px;
+        float:left;
+      }
+  }
+}
+
+.login_signup_left{
+    height:40px;
+    width:110px;
+    background-color:green;
+    border-radius: 10px;
+    text-align: center;
+    float:left;
+    }
+.login_signup_right{
+  width:290px;
+  height:40px;
+  float:left;
+}
+
+
+
+.form_size{
+  height:40px;
+  width: 270px;
+  margin:0 25px 10px 0;
+  border-radius: 10px;
+}
+
+.box_size{
+position:absolute;
+right:310px;
+top:110px;
+}
+
+
+.button_size{
+  width: 90px;
+  height:38px;
+  border-radius: 10px;
+  margin-left: 190px;
+}
