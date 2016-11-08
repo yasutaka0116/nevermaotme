@@ -3,22 +3,27 @@
     .headnav{role: "navigation"}
       %nav
         %ul.navul
-          %li.navli
-            = link_to "ユーザーページ" do
-              =image_tag "http://static.naver.jp/matome/img/common/no_img/user_20x20.png",style: "width: 20; height: 20;", class: "navlist1__img"
-          %li.navli
-            = link_to "まとめ作成", "投稿ページ"
-          %li.navli
-            = link_to "ログアウト", "ログアウトパス"
-          %li.navli
-            = link_to "まとめ作成", "投稿ページ"
-          %li.navli
-            = link_to "会員登録（無料）", "登録ページ"
-          %li.navli
-            = link_to "ログイン", "ログイン"
+          - if user_signed_in?
+            %li.navli
+              = link_to "ユーザーページ" do
+                =image_tag "http://static.naver.jp/matome/img/common/no_img/user_20x20.png",style: "width: 20; height: 20;", class: "navlist1__img"
+            %li.navli
+              = link_to "まとめ作成", new_matome_path
+            %li.navli
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+            %li.navli
+              = link_to "設定", edit_user_path(current_user.id)
+          -else
+            %li.navli
+              = link_to "まとめ作成", "投稿ページ"
+            %li.navli
+              = link_to "会員登録（無料）", new_user_registration_path
+            %li.navli
+              = link_to "ログイン", new_user_session_path
     .headtitle
       %h1.title
-        = link_to "NEVER まとめ", root_path, title: "NAVER まとめ", class: "title__img"
+        = link_to root_path, title: "NAVER まとめ", class: "title__img" do
+          =image_tag "neverまとめ.PNG"
     / %form#searchform
     /   %fieldset
     /     %legend.formhide
