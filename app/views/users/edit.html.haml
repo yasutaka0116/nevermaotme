@@ -1,0 +1,57 @@
+.edit
+  = form_for @user do |f|
+    .left
+      .left_top
+        .left_avatr
+          = image_tag @user.avatar, width:"120", height: "120"
+        %h3
+          = @user.name
+        .left_count
+          %ul
+            %li.left_count_matome1
+              %span
+                = @user.id
+              %span
+                まとめ作成
+            %hr
+            %li.left_count_matome2
+              %span
+                = @user.id
+              %span
+                月間ページビュー
+      .left_bottom
+    .right
+      .config
+        %h1 設定
+        %p.lorn
+          = link_to "NAVERアカウント情報の変更", edit_user_path(current_user)
+        %hr
+      .name
+        %h3.aaaa 名前
+        .name_form
+          = f.text_field :name, size: "76"
+      .image
+        %h3.aaa プロフィール画像
+        .avatr
+          = image_tag "avatar.PNG"
+        %p.ban
+          画像一枚につき1024KBまでアップロ
+          %br/
+          JPG,JPEG,GIF,PNGのみ対応して
+          %br/
+          画像の著作権や肖像権を保護して
+        %span.upload
+          = f.file_field :avatar do
+            = image_tag "アップロード.PNG"
+      .profile
+        %h3.self 自己紹介
+        .selfprofile
+          = f.text_area :profile, cols: "76", rows:"5"
+      .url
+        %h3 運営サイト
+        .urlurl
+          = f.text_field :homepage, size: "76"
+      .button
+        .submit
+          = f.submit do
+            = image_tag "保存.PNG"

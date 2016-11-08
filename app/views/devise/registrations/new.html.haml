@@ -1,0 +1,54 @@
+/ .signup_top
+/   %h1
+/     ようこそ、NEVERへ！
+/   %h2
+/     NEVERアカウントを登録してサービスを利用しよう。
+/ .signtup_middle
+/   .signup_form
+/     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+/       = devise_error_messages!
+/         .field
+/           = f.label :email
+/           %br/
+/           = f.email_field :email, autofocus: true
+/         .field
+/           = f.label :password
+/           - if @minimum_password_length
+/             %em
+/               (#{@minimum_password_length} characters minimum)
+/           %br/
+/           = f.password_field :password, autocomplete: off
+/         .field
+/           = f.label :password_confirmation
+/           %br/
+/           = f.password_field :password_confirmation, autocomplete: off
+/         .actions
+/           = f.submit Sign up
+/   = render devise/shared/links
+
+
+.signup
+  %h1.title
+    = image_tag "ようこそNAVER.PNG"
+= form_for(resource, as: resource_name, url: registration_path(resource_name),html: { method: :post }) do |f|
+  .signup_middle
+    .signup_form
+      %dl.unit
+        %dt
+          %span ユーザー名
+        %dl
+          =f.text_field :name, autofoucus: true, class: "form_size2"
+      %dl.unit
+        %dt
+          %span メールアドレス
+        %dl
+          =f.email_field :email, autofoucus: true, class: "form_size2"
+      %dl.unit
+        %dt
+          %span パスワード
+        %dl
+          = f.password_field :password, class: "form_size2"
+  .signup_button
+    = f.submit "アカウント登録", class: "form_button"
+
+

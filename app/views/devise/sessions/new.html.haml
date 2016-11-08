@@ -1,0 +1,45 @@
+/ %h2 Log in
+/   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+/   .field
+/     = f.label :email
+/     %br/
+/     = f.email_field :email, autofocus: true
+/   .field
+/     = f.label :password
+/     %br/
+/     = f.password_field :password, autocomplete: "off"
+/   - if devise_mapping.rememberable?
+/     .field
+/       = f.check_box :remember_me
+/       = f.label :remember_me
+/   .actions
+/     = f.submit "Log in"
+/ = render "devise/shared/links"
+
+.login
+  %h1.title
+    = link_to root_path, title: "NAVER" do
+      =image_tag "NAVER.PNG"
+= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .login_middle
+    .form
+      .left
+        =f.email_field :email, atuofoucus: true, class: "form_size", placeholder: "メールアドレス"
+        =f.password_field :password, class: "form_size",  autocomplete: "off", placeholder: "パスワード"
+        =f.check_box :remember_me, class: "box_size"
+        =f.label :remember_me, "次回から入力省略"
+        =f.submit "ログイン", class: "button_size"
+      .right
+        %p 他のアカウントでログイン
+        = link_to user_twitter_omniauth_authorize_path do
+          = image_tag "twitter.PNG"
+  .login_signup
+    .form
+      .left
+        = link_to "会員登録", new_user_registration_path
+      .right
+        NEVERアカウントを登録すると
+        %br/
+        さまざまなサービスをご利用になれます。
+
+
